@@ -8,14 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var searchText = ""
+    @StateObject private var searchResultsViewModel = SearchResultsViewModel()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            VStack {
+                TextField("Search...", text: $searchText)
+                    .onChange(of: searchText, perform: searchResultsViewModel.search)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
+                // Pass the non-binding value here
+                SearchResultsView(searchResults: searchResultsViewModel.searchResults)
+            }
+            .navigationBarTitle("Wikipedia Search")
         }
-        .padding()
     }
 }
 
@@ -24,3 +31,6 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+
+

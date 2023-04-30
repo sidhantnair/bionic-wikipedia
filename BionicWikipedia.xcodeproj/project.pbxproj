@@ -11,6 +11,13 @@
 		6FBD55B629F4FAE600F49A77 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBD55B529F4FAE600F49A77 /* ContentView.swift */; };
 		6FBD55B829F4FAEA00F49A77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FBD55B729F4FAEA00F49A77 /* Assets.xcassets */; };
 		6FBD55BB29F4FAEA00F49A77 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FBD55BA29F4FAEA00F49A77 /* Preview Assets.xcassets */; };
+		6FBD55C229F4FC8F00F49A77 /* WikipediaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBD55C129F4FC8F00F49A77 /* WikipediaAPI.swift */; };
+		6FBD55C429F4FCC500F49A77 /* SearchResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBD55C329F4FCC500F49A77 /* SearchResultsView.swift */; };
+		6FBD55C629F4FF6B00F49A77 /* WikipediaPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBD55C529F4FF6A00F49A77 /* WikipediaPageView.swift */; };
+		6FCB801429F5C3E900126A01 /* WikipediaContentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FCB801329F5C3E900126A01 /* WikipediaContentParser.swift */; };
+		6FCB801729F5C52B00126A01 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 6FCB801629F5C52B00126A01 /* SwiftSoup */; };
+		6FCB801929F5C54E00126A01 /* WikipediaContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FCB801829F5C54E00126A01 /* WikipediaContentView.swift */; };
+		6FDBC7D729F5B7D6004E8A99 /* SearchResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDBC7D629F5B7D6004E8A99 /* SearchResultsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +26,12 @@
 		6FBD55B529F4FAE600F49A77 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6FBD55B729F4FAEA00F49A77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6FBD55BA29F4FAEA00F49A77 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6FBD55C129F4FC8F00F49A77 /* WikipediaAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaAPI.swift; sourceTree = "<group>"; };
+		6FBD55C329F4FCC500F49A77 /* SearchResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsView.swift; sourceTree = "<group>"; };
+		6FBD55C529F4FF6A00F49A77 /* WikipediaPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaPageView.swift; sourceTree = "<group>"; };
+		6FCB801329F5C3E900126A01 /* WikipediaContentParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaContentParser.swift; sourceTree = "<group>"; };
+		6FCB801829F5C54E00126A01 /* WikipediaContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaContentView.swift; sourceTree = "<group>"; };
+		6FDBC7D629F5B7D6004E8A99 /* SearchResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FCB801729F5C52B00126A01 /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,10 +65,16 @@
 		6FBD55B229F4FAE600F49A77 /* BionicWikipedia */ = {
 			isa = PBXGroup;
 			children = (
+				6FCB801329F5C3E900126A01 /* WikipediaContentParser.swift */,
+				6FDBC7D629F5B7D6004E8A99 /* SearchResultsViewModel.swift */,
 				6FBD55B329F4FAE600F49A77 /* BionicWikipediaApp.swift */,
 				6FBD55B529F4FAE600F49A77 /* ContentView.swift */,
 				6FBD55B729F4FAEA00F49A77 /* Assets.xcassets */,
 				6FBD55B929F4FAEA00F49A77 /* Preview Content */,
+				6FBD55C129F4FC8F00F49A77 /* WikipediaAPI.swift */,
+				6FBD55C329F4FCC500F49A77 /* SearchResultsView.swift */,
+				6FBD55C529F4FF6A00F49A77 /* WikipediaPageView.swift */,
+				6FCB801829F5C54E00126A01 /* WikipediaContentView.swift */,
 			);
 			path = BionicWikipedia;
 			sourceTree = "<group>";
@@ -83,6 +103,9 @@
 			dependencies = (
 			);
 			name = BionicWikipedia;
+			packageProductDependencies = (
+				6FCB801629F5C52B00126A01 /* SwiftSoup */,
+			);
 			productName = BionicWikipedia;
 			productReference = 6FBD55B029F4FAE600F49A77 /* BionicWikipedia.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +134,9 @@
 				Base,
 			);
 			mainGroup = 6FBD55A729F4FAE600F49A77;
+			packageReferences = (
+				6FCB801529F5C52B00126A01 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+			);
 			productRefGroup = 6FBD55B129F4FAE600F49A77 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +164,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FBD55B629F4FAE600F49A77 /* ContentView.swift in Sources */,
+				6FBD55C429F4FCC500F49A77 /* SearchResultsView.swift in Sources */,
+				6FCB801929F5C54E00126A01 /* WikipediaContentView.swift in Sources */,
+				6FCB801429F5C3E900126A01 /* WikipediaContentParser.swift in Sources */,
+				6FBD55C629F4FF6B00F49A77 /* WikipediaPageView.swift in Sources */,
+				6FDBC7D729F5B7D6004E8A99 /* SearchResultsViewModel.swift in Sources */,
+				6FBD55C229F4FC8F00F49A77 /* WikipediaAPI.swift in Sources */,
 				6FBD55B429F4FAE600F49A77 /* BionicWikipediaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +307,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,6 +337,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,6 +373,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6FCB801529F5C52B00126A01 /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6FCB801629F5C52B00126A01 /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6FCB801529F5C52B00126A01 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6FBD55A829F4FAE600F49A77 /* Project object */;
 }
